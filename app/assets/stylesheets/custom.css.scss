@@ -1,0 +1,74 @@
+.small-sandra {
+  font-size: 13px !important;
+}
+
+$navbar-default-bg: #191970;
+$light-orange: #32CD32;
+$navbar-default-color: 	#4169E1;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+  margin-right: 30px;
+  font-size: 2em;
+  color: #fff;
+  text-transform: none;
+  letter-spacing: none;
+  padding-top: 9px;
+  font-weight: bold;
+  background-color: #1E90FF;
+  
+}
+
+#logo:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #1E90FF;
+  }
+
+body {
+  padding-top: 90px;
+  padding-left: 50px;
+}
+
+.home-box{
+  border: 5px solid white;
+
+}
+
+.nav_item {
+  margin-left: 25px;
+  float: right;
+  margin-top: 20px;
+  
+}
+
+h1, h2, h3, h4 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.jumbotron {
+  background-color: #cce5ff;
+}
+
+.footer{
+  margin-top: 25px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+  text-align: center;
+}
