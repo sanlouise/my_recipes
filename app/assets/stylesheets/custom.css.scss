@@ -1,13 +1,16 @@
+
 .small-sandra {
   font-size: 13px !important;
 }
 
-$navbar-default-bg: #191970;
+$navbar-default-bg: #b3ffb3;
 $light-orange: #32CD32;
 $navbar-default-color: 	#4169E1;
 
+@import url(https://fonts.googleapis.com/css?family=Lato);
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 
 #logo {
   margin-top: 10px;
@@ -29,14 +32,22 @@ $navbar-default-color: 	#4169E1;
     text-decoration: none;
     background-color: #1E90FF;
   }
+  
+
 
 body {
   padding-top: 90px;
   padding-left: 50px;
+  font-family: 'Lato', sans-serif;
+  background-image: url("salad.jpg") !important;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .home-box{
-  border: 5px solid white;
+  width: 32%;
+  margin-left: 2px;
+  margin-right: 2px;
 
 }
 
@@ -64,6 +75,7 @@ h2 {
 
 .jumbotron {
   background-color: #cce5ff;
+  border: 5px solid rgba(255, 255, 255, .5);
 }
 
 .footer{
@@ -71,4 +83,13 @@ h2 {
   padding-top: 10px;
   border-top: 1px solid black;
   text-align: center;
+}
+
+.btn-success {
+  background-color: #2eb82e;
+  font-family: 'Lato', sans-serif;
+}
+
+.home-background {
+  background-image: url(/images/salad.jpg);
 }
