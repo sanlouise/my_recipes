@@ -1,7 +1,7 @@
 <br/>
 <br/>
 <br/>
-<div class="home-background">
+<div class="recipe-background">
   <div class="text-center jumbotron"> 
     <h1> Recipes</h1>
 
@@ -24,7 +24,7 @@
     </div>
     
     <div class="col-lg-8 well"> 
-      <h3><%= link_to recipe.name, " " %> </h3>
+      <h3><%= link_to recipe.name, recipe_path(recipe) %> </h3>
       <h4><%= link_to recipe.summary %></h4>
       <p>
         <span class="quiet">

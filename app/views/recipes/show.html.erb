@@ -1,0 +1,22 @@
+<br>
+<br>
+<div class="jumbotron">
+  <h1><%= @recipe.name %></h1>
+  <div class="row">
+    <div class="col-md-4 pull-right text-center">
+      <%= gravatar_for @recipe.chef, size: 200 %>
+      <p>
+        <h4>Brought to you by Chef <%= @recipe.chef.name %></h4>
+      </p>
+    </div>
+    <div class="col-md-8">
+      <h3><%= @recipe.summary %></h3>
+      <div class="well">
+        <p><b>Steps:</b></p>
+        <%= @recipe.description %>
+      </div>
+    </div>
+  </div>
+  
+  <h5> <%= link_to "Return to Recipes", recipes_path, class: "btn btn-primary btn-md" %> </h5>
+</div>
