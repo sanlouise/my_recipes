@@ -1,0 +1,42 @@
+<br/>
+<br/>
+<br/>
+<div class="home-background">
+  <div class="text-center jumbotron"> 
+    <h1> Recipes</h1>
+
+    <h2> These are recipes from our users.<br/></h2>
+    <hr/>
+
+  <div>
+</div>
+
+
+<% @recipes.each do |recipe| %>
+  <div class="row">
+    <div class="col-md-2">
+      <section class="chef_info center">
+       <%= gravatar_for recipe.chef, size: 100  %>
+       <h5>Chef: <%= recipe.chef.name %></h5>
+       
+      </section>
+      
+    </div>
+    
+    <div class="col-lg-8 well"> 
+      <h3><%= link_to recipe.name, " " %> </h3>
+      <h4><%= link_to recipe.summary %></h4>
+      <p>
+        <span class="quiet">
+          <small>
+            <%= time_ago_in_words(recipe.created_at) %> ago
+          </small>
+        </span>
+
+    </div>
+ 
+    
+  </div>  
+  <hr/>
+<% end %>
+  

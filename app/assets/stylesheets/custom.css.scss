@@ -93,3 +93,23 @@ h2 {
 .home-background {
   background-image: url(/images/salad.jpg);
 }
+
+.well {
+  padding: none !important;
+}
+
+.chef_info {
+  margin-top: 30px;
+}
+
+.gravatar {
+  border-radius: 20px;
+}
+
+hr {
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
