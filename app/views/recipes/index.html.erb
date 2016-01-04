@@ -1,6 +1,4 @@
-<br/>
-<br/>
-<br/>
+
 <div class="recipe-background">
   <div class="text-center jumbotron"> 
     <%= render 'shared/page_title', title: "All Recipes" %>
@@ -23,7 +21,7 @@
       
     </div>
     
-    <div class="col-lg-8 well"> 
+    <div class="col-lg-6 well"> 
       <h3><%= link_to recipe.name, recipe_path(recipe) %> </h3>
       <h4><%= link_to recipe.summary %></h4>
       <p>
@@ -32,7 +30,9 @@
             <%= time_ago_in_words(recipe.created_at) %> ago
           </small>
         </span>
-
+    </div>
+    <div class="col-md-4">
+      <%= image_tag(recipe.picture.url, size: "250x150", class: "gravatar") if recipe.picture? %>
     </div>
  
     
