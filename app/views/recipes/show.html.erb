@@ -1,7 +1,8 @@
 <br>
 <br>
 <div class="jumbotron">
-  <h1><%= @recipe.name %></h1>
+  <%= render 'shared/page_title', title: @recipe.name %>
+  
   <div class="row">
     <div class="col-md-4 pull-right text-center">
       <%= gravatar_for @recipe.chef, size: 200 %>

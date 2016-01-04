@@ -1,38 +1,7 @@
 <div class="home-background">
   <div class="text-center jumbotron">
-    <p>
-      <h1> Create a new Recipe</h1>
-      <hr/>
-    </p>
+<%= render 'shared/page_title', title: "Create a New Recipe" %>
     
-    <% if @recipe.errors.any? %>
-      <div class="row">
-        <div class="alert alert-danger col-md-8 col-md-offset-2">
-          <h5>Please correct the following errors:</h5>
-            <ul>
-              <% @recipe.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-            </ul>
-        </div>
-      </div>
-    <% end %>
-    
-    <div class= "row">
-      <div class="well col-md-8 col-md-offset-2">
-        <%= form_for @recipe do |f| %>
-          <%= f.label(:name, "Recipe Name") %>
-          <%= f.text_field :name %>
-          
-          <%= f.label(:summary, "Keywords") %>
-          <%= f.text_field :summary %>
-          
-          <%= f.label :description %>
-          <%= f.text_area :description, rows: 10 %>
-          
-          <%= f.submit 'Create Recipe', class: "btn btn-success" %>
-          <% end %>
-      </div>
-    </div>
+  <%= render 'form' %>
   </div>
 </div>
