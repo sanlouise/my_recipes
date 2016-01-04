@@ -1,6 +1,6 @@
 <header class="navbar navbar-fixed-top navbar-default">
   <div class="container">
-    <%= link_to "My Recipes", "", class: "btn btn-default btn-primary", id: "logo" %>
+    <%= link_to "My Recipes", root_path, class: "btn btn-default btn-primary", id: "logo" %>
     <!--<%= link_to image_tag("cook_vegetarian_logo2.png"), root_path, id: "logo" %>-->
       <div class="nav_item">
         <%= link_to "Contact", "", class: "btn btn-large btn-success" %>
@@ -11,7 +11,7 @@
       </div>
       
       <div class="nav_item">
-        <%= link_to "Blog", "", class: "btn btn-large btn-success" %>
+        <%= link_to "New Recipe", new_recipe_path, class: "btn btn-large btn-success" %>
       </div>
   </div>
 </header>
