@@ -6,10 +6,10 @@
     <%= f.label(:name, "Recipe Name") %>
     <%= f.text_field :name %>
     
-    <%= f.label(:summary, "Short Summary") %>
-    <%= f.text_field :summary %>
+    <%= f.label(:summary, "Ingredients") %>
+    <%= f.text_area :summary, rows: 10 %>
     
-    <%= f.label :description %>
+    <%= f.label(:description, "Description and Steps") %>
     <%= f.text_area :description, rows: 10 %>
     
     <span class="picture">
