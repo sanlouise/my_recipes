@@ -35,3 +35,4 @@ chefname must be between 2 and 50 characters
 email must be present
 email must be unique
 email must be valid
+
