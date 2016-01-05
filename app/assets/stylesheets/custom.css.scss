@@ -91,9 +91,14 @@ h2 {
   margin-right: 20px;
 }
 
-.home-background {
-  background-image: url(/images/salad.jpg);
+html {
+   background: url(http://www.fellowshipofthevegetable.com/wp-content/uploads/2013/05/EcoVeganGal-Plum-Cookbook-Review-Geoff-Souder-1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 
 .well {
   padding: none !important;
@@ -129,4 +134,13 @@ span.picture {
 
 .show_recipe {
   margin: 10px 10px 10px 10px;
+}
+
+.col-md-4.text-center.well{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body.image-responsive{
+  background-color: none !important;
 }
