@@ -27,11 +27,25 @@
       <h2 class="left">Browse and View Recipes</h2>
       <p><%= link_to "Browse Recipe Listings", recipes_path , class: "btn btn-primary btn-small" %></p>
     </div>
+    
+   <% if logged_in? %>  
+   
     <div class="col-md-6 text-center  well">
+      <h3 class="midrow">Manage Your Recipes</h3>
+      <h2 class="left">See how your creations do in the community. </h2>
+      <p><%= link_to "Log In", login_path, class: "btn btn-primary btn-small" %></p>
+    </div>
+    
+    <% else %>
+    
+        <div class="col-md-6 text-center  well">
       <h3 class="midrow">Log in to Your Account</h3>
       <h2 class="left">Add or Update Your Recipes </h2>
       <p><%= link_to "Log In", login_path, class: "btn btn-primary btn-small" %></p>
     </div>
+    
+    <% end %>
+    
     <!--<div class="col-md-4 text-center well">-->
     <!--  <h3 class="midrow">View Recipes as Guest User</h3>-->
     <!--  <h2 class="left">Browse and View Recipes </h2>-->
