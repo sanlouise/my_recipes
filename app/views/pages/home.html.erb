@@ -1,12 +1,22 @@
 
 <div class="home-background">
   <div class="text-center jumbotron"> 
+  
+  <% if logged_in? %>
+    <h1> Show your cooking genius!</h1>
+      <h2> Share your recipes with our hungry community.<br/></h2>
+        <container>
+          <%= link_to "New Recipe", new_recipe_path, class: "btn btn-lg btn-success" %>
+        </container>
+  <% else %>
     <h1> Sandra's Vegan Recipes</h1>
-    <h2> All you'll ever need to make great meals.<br/></h2>
-      <container><%= link_to "Sign Up", "", class: "btn btn-lg btn-success" %>
-
-      <!--<p class="small-sandra">It's free!</p>-->
+    <h2> All you'll ever need to make great meals.</h2>
+      <container>
+        <%= link_to "Sign Up", register_path, class: "btn btn-lg btn-success" %>
       </container>
+  <% end %>
+      <!--<p class="small-sandra">It's free!</p>-->
+      
     
   </div>
   
@@ -18,9 +28,9 @@
       <p><%= link_to "Browse Recipe Listings", recipes_path , class: "btn btn-primary btn-small" %></p>
     </div>
     <div class="col-md-6 text-center  well">
-      <h3 class="midrow">View Recipes as Guest User</h3>
-      <h2 class="left">Browse and View Recipes </h2>
-      <p><%= link_to "Browse Recipe Listings", "#", class: "btn btn-primary btn-small" %></p>
+      <h3 class="midrow">Log in to Your Account</h3>
+      <h2 class="left">Add or Update Your Recipes </h2>
+      <p><%= link_to "Log In", login_path, class: "btn btn-primary btn-small" %></p>
     </div>
     <!--<div class="col-md-4 text-center well">-->
     <!--  <h3 class="midrow">View Recipes as Guest User</h3>-->
