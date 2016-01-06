@@ -91,13 +91,13 @@ h2 {
   margin-right: 20px;
 }
 
-html {
-   background: url(http://www.fellowshipofthevegetable.com/wp-content/uploads/2013/05/EcoVeganGal-Plum-Cookbook-Review-Geoff-Souder-1.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+// html {
+//   background: url(http://www.fellowshipofthevegetable.com/wp-content/uploads/2013/05/EcoVeganGal-Plum-Cookbook-Review-Geoff-Souder-1.jpg) no-repeat center center fixed; 
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
 
 
 .well {
@@ -155,3 +155,6 @@ h2 {
   text-align: center;
 }
 
+ul{
+    list-style-type: none;
+}
