@@ -57,11 +57,36 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     erubis (2.7.0)
+    excon (0.45.4)
     execjs (2.6.0)
+    fog (1.23.0)
+      fog-brightbox
+      fog-core (~> 1.23)
+      fog-json
+      fog-softlayer
+      ipaddress (~> 0.5)
+      nokogiri (~> 1.5, >= 1.5.11)
+    fog-brightbox (0.10.1)
+      fog-core (~> 1.22)
+      fog-json
+      inflecto (~> 0.0.2)
+    fog-core (1.35.0)
+      builder
+      excon (~> 0.45)
+      formatador (~> 0.2)
+    fog-json (1.0.2)
+      fog-core (~> 1.0)
+      multi_json (~> 1.10)
+    fog-softlayer (1.0.2)
+      fog-core
+      fog-json
+    formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hike (1.2.3)
     i18n (0.7.0)
+    inflecto (0.0.2)
+    ipaddress (0.8.2)
     jbuilder (2.0.0)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -166,6 +191,7 @@ DEPENDENCIES
   bootstrap-will_paginate (= 0.0.10)
   carrierwave (= 0.10.0)
   coffee-rails (= 4.0.0)
+  fog (= 1.23.0)
   jbuilder (= 2.0)
   jquery-rails
   mini_magick (= 3.8.0)
