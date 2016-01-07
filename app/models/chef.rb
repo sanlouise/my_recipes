@@ -1,5 +1,7 @@
 class Chef < ActiveRecord::Base
   has_many :recipes
+  has_many :recipe_comments, dependent: :destroy
+  has_many :comments, through: :recipe_comments
   before_save { self.name = name }
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { minimum: 2, maximum: 50}
