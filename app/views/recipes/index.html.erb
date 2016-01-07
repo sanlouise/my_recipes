@@ -33,7 +33,9 @@
     
     <div class="col-lg-6 well"> 
       <h3><%= link_to recipe.name, recipe_path(recipe) %> </h3>
-      <h4><%= link_to recipe.summary %></h4>
+      <h4><%= recipe.summary %></h4>
+      <p>Style: <%= render recipe.styles %></p>
+      <p>Ingredients: <%= render recipe.ingredients %></p>
       <p>
         <span class="quiet">
           <small>
