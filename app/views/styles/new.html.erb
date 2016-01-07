@@ -1,0 +1,15 @@
+<%= render 'shared/page_title', title: "Create a New Style" %>
+
+<%= render 'shared/errors', obj: @style %>
+
+<div class= "row">
+  <div class="well col-md-6 col-md-offset-3 text-center">
+  <%= form_for @style do |f| %>
+    <%= f.label(:name, "Style Name") %>
+    <%= f.text_field :name %>
+    
+    
+    <%= f.submit(@style.new_record? ? 'Create Style' : 'Edit Style', class: "btn btn-success") %>
+    <% end %>
+  </div>
+</div>
