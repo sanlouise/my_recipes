@@ -23,8 +23,13 @@
       
         
       <div class="well">
-        <p>Dish Style: <%= render @recipe.styles %></p>
-        <p>Ingredients: <%= render @recipe.ingredients %></p>
+        <% if @recipe.styles.any? %>
+          <p>Dish Style: <%= render @recipe.styles %></p>
+        <% end %>
+        
+        <% if @recipe.styles.any? %>
+          <p>Ingredients: <%= render @recipe.ingredients %></p>
+        <% end %>
         
         <p><b>Steps:</b></p>
         <%= simple_format(@recipe.description) %>

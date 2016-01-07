@@ -135,6 +135,10 @@ input, textarea, select, .uneditable-input {
   
 }
 
+.input_checkbox input {
+  width: auto !important;
+}
+
 input {
   height: auto !important;
 }
@@ -219,8 +223,3 @@ ul{
 
 //--footer //
 
-.input#recipe_style_ids_1.checkbox {
-  text-align: left;
-  position: relative;
-  width: 50% !important;
-}
