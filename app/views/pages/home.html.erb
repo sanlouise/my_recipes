@@ -25,15 +25,15 @@
     <div class="col-md-6 text-center well">
       <h2 class="midrow">View Recipes as Guest User</h2>
       <h4 class="left">Browse and View Recipes</h4>
-      <p><%= link_to "Browse Recipe Listings", recipes_path , class: "btn btn-primary btn-small" %></p>
+      <p><%= link_to "Browse All Recipes", recipes_path , class: "btn btn-primary btn-small" %></p>
     </div>
     
    <% if logged_in? %>  
    
     <div class="col-md-6 text-center  well">
       <h2 class="midrow">Manage Your Recipes</h2>
-      <h4 class="left">See how well your creations do in the community. </h4>
-      <p><%= link_to "Log In", login_path, class: "btn btn-primary btn-small" %></p>
+      <h4 class="left">Share the love! </h4>
+      <p><%= link_to "Your Recipes", chef_path(current_user), class: "btn btn-primary btn-small" %></p>
     </div>
     
     <% else %>

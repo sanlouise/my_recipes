@@ -6,7 +6,10 @@
       
       <% if logged_in? %>
       
-
+        <div class="nav_item">
+          <%= link_to "Logout", logout_path, class: "btn btn-large btn-danger" %>
+        </div>
+        
         <ul class="nav_item">
           <li class="dropdown">
             <%= link_to '#', class: "btn btn-default btn-danger dropdown-toggle", "data-toggle" => "dropdown" do %>
@@ -28,7 +31,7 @@
         <% else %>
         
         <div class="nav_item">
-          <%= link_to "Login", login_path, class: "btn btn-large btn-default" %>
+          <%= link_to "Login", login_path, class: "btn btn-large btn-success" %>
         </div>
         
       <% end %>
