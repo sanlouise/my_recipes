@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   
    resources :recipes
    
-   resources :chefs, except: [:new]
+   resources :chefs, except: [:new, :destroy]
    
    get '/register', to: 'chefs#new'
    

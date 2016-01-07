@@ -74,8 +74,13 @@ h2 {
 }
 
 .jumbotron {
-  background-color: #87D37C;
+  background-color: #5D8CAE;
   border: 5px solid rgba(255, 255, 255, .5);
+}
+
+.white.jumbotron{
+    color: white !important;
+    border: none !important;
 }
 
 .footer{
