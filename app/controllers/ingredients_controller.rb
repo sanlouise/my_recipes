@@ -1,4 +1,5 @@
 class IngredientsController < ApplicationController
+    before_action :require_user, except: [:show]
   
   def show
     @ingredient = Ingredient.find(params[:id])

@@ -20,7 +20,11 @@
         <%= image_tag(@recipe.picture.url, class: "gravatar") if @recipe.picture? %>
       </div>
         
+      
+        
       <div class="well">
+        <p>Dish Style: <%= render @recipe.styles %></p>
+        <p>Ingredients: <%= render @recipe.ingredients %></p>
         
         <p><b>Steps:</b></p>
         <%= simple_format(@recipe.description) %>
@@ -29,6 +33,7 @@
   </div>
     <% if logged_in? and @recipe.chef == current_user %>
       <h4><%= link_to "Edit this Recipe", edit_recipe_path(@recipe), class: "btn btn-success pull-left" %></h4>
+    <% end %> 
       <h5><%= link_to "Return to Recipes", recipes_path, class: "btn btn-primary btn-md" %> </h5>
-    <% end %>
+    
 </div>

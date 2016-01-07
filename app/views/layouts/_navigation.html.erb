@@ -1,48 +1,96 @@
-<header class="navbar navbar-fixed-top navbar-default">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
-    <%= link_to "My Recipes", root_path, class: "btn btn-default btn-primary", id: "logo" %>
-    <!--<%= link_to image_tag("cook_vegetarian_logo2.png"), root_path, id: "logo" %>-->
-
+    <div class="navbar-header">
       
-      <% if logged_in? %>
-      
+      <!--Responsive navbar-->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+        <span class="sr-only">Toggle Navbar</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <!--Logo-->
+      <%= link_to root_path, class: 'navbar-brand', id: "logo" do %>
+        The <span id="logo-veg">Vegan</span> Way
+      <% end %>
+    </div>
+    
+    <!--Logo contents right-side-->
+    <div class="collapse navbar-collapse" id="main-nav-collapse">
+      <div class="nav navbar-nav navbar-right">
+        
+        <!--Contact Button-->
         <div class="nav_item">
-          <%= link_to "Logout", logout_path, class: "btn btn-large btn-danger" %>
+          <%= link_to "Contact", contact_path, class: "btn btn-large btn-default" %>
         </div>
         
-        <ul class="nav_item">
-          <li class="dropdown">
-            <%= link_to '#', class: "btn btn-default btn-danger dropdown-toggle", "data-toggle" => "dropdown" do %>
-              <%= current_user.name %> <b class="caret"></b>
-            <% end %>
+        <!--About Button-->
+        <div class="nav_item">
+          <%= link_to "About", about_path, class: "btn btn-large btn-default" %>
+        </div>
+        
+        <% if logged_in? %>
+          
+          <!--Logged In Dropdown Menu-->
+          <ul class="nav_item">
+            <li class="dropdown">
+              <%= link_to '#', class: "btn btn-default btn-success dropdown-toggle", "data-toggle" => "dropdown" do %>
+                <%= current_user.name %> <b class="caret"></b>
+              <% end %>
               <ul class="dropdown-menu">
                 <li><%= link_to "View Profile", chef_path(current_user) %></li>
                 <li><%= link_to "Edit Profile", edit_chef_path(current_user) %></li>
                 <li class="divider"></li>
-                <li> <%= link_to "Logout", logout_path %> </li>
+                <li><%= link_to "Logout", logout_path %></li>
               </ul>
-          </li>
-        </ul>
+            </li>
+          </ul>
         
-        <div class="nav_item">
-          <%= link_to "New Recipe", new_recipe_path, class: "btn btn-large btn-success" %>
-        </div>
-
+          <!--New Recipe Button-->
+          <div class="nav_item">
+            <%= link_to "New Recipe", new_recipe_path, class: "btn btn-large btn-success" %>
+          </div>
+        
         <% else %>
+          
+          <!--Login Button-->
+          <div class="nav_item">
+            <%= link_to "Login", login_path, class: "btn btn-default btn-success" %>
+          </div>
+          
+        <% end %>
         
-        <div class="nav_item">
-          <%= link_to "Login", login_path, class: "btn btn-large btn-success" %>
-        </div>
+        <!--Styles Button-->
+        <!--<ul class="nav_item">-->
+        <!--  <li class="dropdown">-->
+        <!--    <%= link_to '#', class: "btn btn-default btn-success dropdown-toggle", "data-toggle" => "dropdown" do %>-->
+        <!--      Styles <b class="caret"></b>-->
+        <!--    <% end %>-->
+        <!--    <ul class="dropdown-menu">-->
+        <!--      <% Style.all.each do |style| %>-->
+        <!--        <li><%= link_to style.name, style_path(style) %></li>-->
+        <!--      <% end %>-->
+        <!--    </ul>-->
+        <!--  </li>-->
+        <!--</ul>-->
         
-      <% end %>
-      
-        <div class="nav_item">
-          <%= link_to "Contact", "", class: "btn btn-large btn-success" %>
-        </div>
-        
-        <div class="nav_item">
-          <%= link_to "About", "", class: "btn btn-large btn-success" %>
-        </div>
-      
+        <!--Ingredients Button-->
+        <!--<ul class="nav_item">-->
+        <!--  <li class="dropdown">-->
+        <!--    <%= link_to '#', class: "btn btn-default btn-success dropdown-toggle", "data-toggle" => "dropdown" do %>-->
+        <!--      Ingredients <b class="caret"></b>-->
+        <!--    <% end %>-->
+        <!--    <ul class="dropdown-menu">-->
+        <!--      <% Ingredient.all.each do |ingredient| %>-->
+        <!--        <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>-->
+        <!--      <% end %>-->
+        <!--    </ul>-->
+        <!--  </li>-->
+        <!--</ul>-->
+    
+      </div>
+    </div>    
   </div>
-</header>
+</nav>
+
