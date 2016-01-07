@@ -1,0 +1,58 @@
+<div class="recipe-background">
+
+   <%= render 'shared/page_title', title: "Recipes for: " + @style.name %>
+
+<ul class="nav nav-tabs">
+  <li class="active">
+    <%= link_to "Recipes", recipes_path %>
+  </li>
+  <li>
+    <%= link_to "Chefs", chefs_path %>
+  </li>
+</ul>
+
+    <h2> Yummie recipes!<br/></h2>
+
+
+
+</div>
+<%= will_paginate @recipes %>
+
+
+<% @style.recipes.each do |recipe| %>
+  <div class="row">
+    <div class="col-md-2">
+      <section class="chef_info center">
+       <%= link_to gravatar_for(recipe.chef, size: 100), chef_path(recipe.chef) %>
+       <h5>Chef: <%= recipe.chef.name %></h5>
+       
+      </section>
+      
+    </div>
+    
+    <div class="col-lg-6 well"> 
+      <h3><%= link_to recipe.name, recipe_path(recipe) %> </h3>
+      <h4><%= recipe.summary %></h4>
+      <p>Style: <%= render recipe.styles %></p>
+      <p>Ingredients: <%= render recipe.ingredients %></p>
+      <p>
+        <span class="quiet">
+          <small>
+            Created: <%= time_ago_in_words(recipe.created_at) %> ago.
+          </small>
+        </span>
+         <span class="quiet">
+          <small>
+            Updated: <%= time_ago_in_words(recipe.updated_at) %> ago.
+          </small>
+        </span>
+    </div>
+    <div class="col-md-4">
+      <%= image_tag(recipe.picture.url, size: "250x150", class: "gravatar") if recipe.picture? %>
+    </div>
+ 
+    
+  </div>  
+  <hr/>
+<% end %>
+<%= will_paginate @recipes %>
