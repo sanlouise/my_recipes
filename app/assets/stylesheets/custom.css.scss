@@ -44,6 +44,8 @@ body {
   background-repeat: no-repeat;
 }
 
+
+
 .home-box{
   width: 32%;
   margin-left: 2px;
@@ -105,13 +107,7 @@ h2 {
 }
 
 
-// html {
-//   background: url(http://www.fellowshipofthevegetable.com/wp-content/uploads/2013/05/EcoVeganGal-Plum-Cookbook-Review-Geoff-Souder-1.jpg) no-repeat center center fixed; 
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-// }
+
 
 
 a {
@@ -166,16 +162,6 @@ span.picture {
 
 
 
-.img-responsive.home{
-  background: url(https://repurposedlife.files.wordpress.com/2012/07/4th-of-july-036.jpg) no-repeat center center fixed !important; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-   background-size: cover;
-   width: 100% !important;
-   height: auto !important;
-}
-
 h2 {
   text-align: center;
 }
@@ -217,4 +203,14 @@ ul{
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+}
+
+div.white.jumbotron.p.small-sandra {
+  font-size: 9px !important;
+  text-align: center !important;
+  margin-top: 10px !important;
+}
+
+.image.responsive.home-bg {
+  background-image: url("http://www.sacredmedicinejourney.org/wp-content/uploads/2014/05/vegan-food.jpg");
 }

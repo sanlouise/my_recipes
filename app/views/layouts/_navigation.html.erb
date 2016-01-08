@@ -59,7 +59,7 @@
           
           <!--Logged In Dropdown Menu-->
           <li class="dropdown">
-            <%= link_to '#', class: "dropdown-toggle glyphicon glyphicon-user btn btn-success", id: "user-profile", data:{toggle: 'dropdown'}, role: "button", "aria-expanded" => "false" do %>
+            <%= link_to '#', class: "dropdown-toggle btn btn-success", id: "user-profile", data:{toggle: 'dropdown'}, role: "button", "aria-expanded" => "false" do %>
               <%= current_user.name %> <b class="caret"></b>
             <% end %>
               <ul class="dropdown-menu" role="menu">
