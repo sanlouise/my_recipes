@@ -27,6 +27,7 @@ gem 'bcrypt', '3.1.7'
 gem 'fog', '1.36.0'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',   group: :development
+gem 'font-awesome-sass', '4.5.0'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

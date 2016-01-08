@@ -13,6 +13,7 @@ $navbar-default-color: 	#4169E1;
 @import "bootstrap";
 
 
+
 #logo {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -106,9 +107,23 @@ h2 {
   border-radius: 0px !important;
 }
 
+.btn.btn-lg.btn-warning {
+  background-color: #F58F84;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  border: none;
+  margin-right: 20px;
+  border-radius: 5px !important;
+}
 
-
-
+.btn.btn-lg.btn-warning:hover {
+  background-color: #FCC9B9;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  margin-right: 20px;
+  border-radius: 5px !important;
+}
 
 a {
   text-decoration: none;   
@@ -212,5 +227,15 @@ div.white.jumbotron.p.small-sandra {
 }
 
 .image.responsive.home-bg {
-  background-image: url("http://www.sacredmedicinejourney.org/wp-content/uploads/2014/05/vegan-food.jpg");
+  background-image: url("http://resiliencefitness.com/wp-content/uploads/2013/09/salad.jpg");
+}
+
+.footer {
+   position:fixed;
+   left:0px;
+   bottom:00px;
+   height:40px;
+   width:100%;
+   background-color: white;
+
 }

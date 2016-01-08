@@ -5,16 +5,19 @@
      <div class="white jumbotron">
     
     <% if logged_in? %>
-      <h1> Show your cooking genius!</h1>
+      <h1> Show your cooking genius! </h1>
         <h2> Share your recipes with our hungry community.<br/></h2>
           <container>
             <%= link_to "New Recipe", new_recipe_path, class: "btn btn-lg btn-success" %>
           </container>
     <% else %>
-      <h1> A Healthy, Happy Life.</h1>
+      <h1> A Healthy, Happy Life. </h1>
+      <br/>
+      
       <h2> For all beings on planet earth.</h2>
+      <br/>
         <container>
-          <%= link_to "Join Now", register_path, class: "btn btn-lg btn-success" %>
+          <%= link_to "Join Now", register_path, class: "btn btn-lg btn-warning" %>
         </container>
     <% end %>
         <!--<p class="small-sandra">Find Out Why</p>-->
