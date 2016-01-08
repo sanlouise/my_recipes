@@ -1,57 +1,58 @@
-
-<div class="home-background">
-  <div class="text-center jumbotron"> 
-   <div class="white jumbotron">
-  
-  <% if logged_in? %>
-    <h1> Show your cooking genius!</h1>
-      <h2> Share your recipes with our hungry community.<br/></h2>
-        <container>
-          <%= link_to "New Recipe", new_recipe_path, class: "btn btn-lg btn-success" %>
-        </container>
-  <% else %>
-    <h1> Sandra's Vegan Recipes</h1>
-    <h2> All you'll ever need to make great meals.</h2>
-      <container>
-        <%= link_to "Sign Up", register_path, class: "btn btn-lg btn-success" %>
-      </container>
-  <% end %>
-      <!--<p class="small-sandra">It's free!</p>-->
-      
-    </div>
-  </div>
-  
-  
-  <div class="row">
-    <div class="col-md-6 text-center well">
-      <h2 class="midrow">View Recipes as Guest User</h2>
-      <h4 class="left">Browse and View Recipes</h4>
-      <p><%= link_to "Browse All Recipes", recipes_path , class: "btn btn-primary btn-small" %></p>
-    </div>
+<body>
+  <div class ="img-responsive home">
+    <div class="text-center jumbotron"> 
+     <div class="white jumbotron">
     
-   <% if logged_in? %>  
-   
-    <div class="col-md-6 text-center  well">
-      <h2 class="midrow">Manage Your Recipes</h2>
-      <h4 class="left">Share the love! </h4>
-      <p><%= link_to "Your Recipes", chef_path(current_user), class: "btn btn-primary btn-small" %></p>
-    </div>
-    
+    <% if logged_in? %>
+      <h1> Show your cooking genius!</h1>
+        <h2> Share your recipes with our hungry community.<br/></h2>
+          <container>
+            <%= link_to "New Recipe", new_recipe_path, class: "btn btn-lg btn-success" %>
+          </container>
     <% else %>
-    
-        <div class="col-md-6 text-center  well">
-      <h2 class="midrow">Log in to Your Account</h2>
-      <h4 class="left">Add or Update Your Recipes </h4>
-      <p><%= link_to "Log In", login_path, class: "btn btn-primary btn-small" %></p>
+      <h1> A Healty, Happy Life.</h1>
+      <h2> For all beings on planet earth.</h2>
+        <container>
+          <%= link_to "Join Now", register_path, class: "btn btn-lg btn-success" %>
+        </container>
+    <% end %>
+        <!--<p class="small-sandra">It's free!</p>-->
+        
+      </div>
     </div>
     
-    <% end %>
     
-    <!--<div class="col-md-4 text-center well">-->
-    <!--  <h3 class="midrow">View Recipes as Guest User</h3>-->
-    <!--  <h2 class="left">Browse and View Recipes </h2>-->
-    <!--  <p><%= link_to "Browse Recipe Listings", "#", class: "btn btn-primary btn-small" %></p>-->
-  
-    <!--</div>-->
+    <div class="row">
+      <div class="col-md-6 text-center well">
+        <h2 class="midrow">View Recipes as Guest User</h2>
+        <h4 class="left">Browse and View Recipes</h4>
+        <p><%= link_to "Browse All Recipes", recipes_path , class: "btn btn-primary btn-small" %></p>
+      </div>
+      
+     <% if logged_in? %>  
+     
+      <div class="col-md-6 text-center  well">
+        <h2 class="midrow">Manage Your Recipes</h2>
+        <h4 class="left">Share the love! </h4>
+        <p><%= link_to "Your Recipes", chef_path(current_user), class: "btn btn-primary btn-small" %></p>
+      </div>
+      
+      <% else %>
+      
+          <div class="col-md-6 text-center  well">
+        <h2 class="midrow">Log in to Your Account</h2>
+        <h4 class="left">Add or Update Your Recipes </h4>
+        <p><%= link_to "Log In", login_path, class: "btn btn-primary btn-small" %></p>
+      </div>
+      
+      <% end %>
+      
+      <!--<div class="col-md-4 text-center well">-->
+      <!--  <h3 class="midrow">View Recipes as Guest User</h3>-->
+      <!--  <h2 class="left">Browse and View Recipes </h2>-->
+      <!--  <p><%= link_to "Browse Recipe Listings", "#", class: "btn btn-primary btn-small" %></p>-->
+    
+      <!--</div>-->
+    </div>
   </div>
-</div>
+</body>
