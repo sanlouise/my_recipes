@@ -229,7 +229,14 @@ div.white.jumbotron.p.small-sandra {
 .image.responsive.home-bg {
   background-image: url("http://resiliencefitness.com/wp-content/uploads/2013/09/salad.jpg");
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  
+  
 }
 
 .footer {
@@ -240,4 +247,10 @@ div.white.jumbotron.p.small-sandra {
    width:100%;
    background-color: white;
 
+}
+
+.col-md-12-hide {
+  opacity: 0;
+  background-color: none;
+  padding-bottom: 30px;
 }
