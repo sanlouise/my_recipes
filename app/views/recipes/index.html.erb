@@ -19,14 +19,13 @@
 
 <% @recipes.each do |recipe| %>
   <div class="row">
-    <div class="col-md-2">
-      <section class="chef_info center">
-       <%= link_to gravatar_for(recipe.chef, size: 100), chef_path(recipe.chef) %>
-       <h5>Chef: <%= recipe.chef.name %></h5>
-       
-      </section>
+   
       
+    <div class="col-md-4">
+      <%= image_tag(recipe.picture.url, size: "300x175", class: "gravatar") if recipe.picture? %>
     </div>
+  
+ 
     
     <div class="col-lg-6 well"> 
       <h3><%= link_to recipe.name, recipe_path(recipe) %> </h3>
@@ -51,10 +50,14 @@
           </small>
         </span>
     </div>
-    <div class="col-md-4">
-      <%= image_tag(recipe.picture.url, size: "250x150", class: "gravatar") if recipe.picture? %>
-    </div>
- 
+
+     <div class="col-md-2">
+       <section class="chef_info center">
+         <%= link_to gravatar_for(recipe.chef, size: 100), chef_path(recipe.chef) %>
+       <h5>Chef: <%= recipe.chef.name %></h5>
+       
+      </section>
+      </div>
     
   </div>  
   <hr/>

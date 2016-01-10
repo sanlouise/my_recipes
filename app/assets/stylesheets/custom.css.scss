@@ -263,11 +263,22 @@ h3.a {
   text-align: center !important;
 }
 
+.div-index-recipes
+
+{
+  background-color: black !important;
+  margin-bottom: 10px !important;
+}
 
 
+.col-lg-6.well {
+  margin-top: 5px;
+  margin-bottom: 5px !important;
+}
 
-
-
+hr {
+  color: black !important;
+}
 
 // Media Queries
 
@@ -278,4 +289,10 @@ h3.a {
   
 }
 
+.img-gravatar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+}
 }
