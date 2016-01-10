@@ -254,3 +254,28 @@ div.white.jumbotron.p.small-sandra {
   background-color: none;
   padding-bottom: 30px;
 }
+
+.basic-div {
+  background-color: #cce5ff;
+}
+
+h3.a {
+  text-align: center !important;
+}
+
+
+
+
+
+
+
+// Media Queries
+
+@media screen and (max-width: 500px) {
+  
+.chef_info {
+    display: none;
+  
+}
+
+}
