@@ -2,7 +2,7 @@
   
   <div class ="img-responsive home">
 
-     <div class="white jumbotron text-center">
+     <div class="white jumbotron text-center home">
     
     <% if logged_in? %>
       <h1> Show your cooking genius! </h1>
@@ -29,9 +29,9 @@
     <div class="row">
       <div class="col-md-12">
         <div class="col-md-4 col-md-offset-1 well text-center">
-          <h2 class="midrow">View Recipes as Guest User</h2>
-          <h4 class="left">Browse and View Recipes</h4>
-          <p><%= link_to "Browse All Recipes", recipes_path, class: "btn btn-primary btn-small" %></p>
+          <h2 class="midrow">Just want to browse?</h2>
+
+          <%= link_to "Browse All Recipes", recipes_path, class: "btn btn-primary btn-small" %>
         </div>
         
         <div class="col-md-2">
@@ -42,19 +42,21 @@
        
         <div class="col-md-4 offset-right-1 well">
           <h2 class="midrow">Manage Your Recipes</h2>
-          <h4 class="left">Share the love! </h4>
-          <p><%= link_to "Your Recipes", chef_path(current_user), class: "btn btn-primary btn-small" %></p>
+
+          <%= link_to "Your Recipes", chef_path(current_user), class: "btn btn-primary btn-small" %>
         </div>
+        
+       
         
         <% else %>
         
         <div class="col-md-4 offset-right-1 text-center well">
           <h2 class="midrow">Log in to Your Account</h2>
-          <h4 class="left">Add or Update Your Recipes </h4>
-          <p><%= link_to "Log In", login_path, class: "btn btn-success btn-small" %></p>
+
+          <%= link_to "Log In", login_path, class: "btn btn-success btn-small" %>
         </div>
       </div>
-      <hr>
+
       <div class="col-md-12-hide">
             ...
       </div>

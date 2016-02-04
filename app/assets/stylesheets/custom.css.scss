@@ -77,14 +77,10 @@ h2 {
 }
 
 .jumbotron {
-  background-color: #5D8CAE;
+  background-color: transparent;
   border: 5px solid rgba(255, 255, 255, .5);
 }
 
-.white.jumbotron{
-    color: white !important;
-    border: none !important;
-}
 
 .footer{
   margin-top: 25px;
@@ -108,7 +104,7 @@ h2 {
 }
 
 .btn.btn-lg.btn-warning {
-  background-color: #F58F84;
+  background-color: #006442;
   font-family: 'Lato', sans-serif;
   font-size: 26px;
   border: none;
@@ -117,7 +113,7 @@ h2 {
 }
 
 .btn.btn-lg.btn-warning:hover {
-  background-color: #FCC9B9;
+  background-color: #26A65B;
   border: none;
   font-family: 'Lato', sans-serif;
   font-size: 26px;
@@ -227,7 +223,7 @@ div.white.jumbotron.p.small-sandra {
 }
 
 .image.responsive.home-bg {
-  background-image: url("http://resiliencefitness.com/wp-content/uploads/2013/09/salad.jpg");
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Raw_Vegan_Veggy_Patty.jpg");
   background-size: 100%;
   background-repeat:no-repeat;
   -webkit-background-size:cover;
@@ -240,7 +236,6 @@ div.white.jumbotron.p.small-sandra {
 }
 
 .footer {
-   position:fixed;
    left:0px;
    bottom:00px;
    height:40px;
