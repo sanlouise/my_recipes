@@ -1,7 +1,7 @@
 
 <div class="recipe-background">
   <%= render 'shared/page_title', title: "All Recipes" %>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs text-center">
       <li class="active">
         <%= link_to "Recipes", recipes_path %>
       </li>
@@ -11,10 +11,12 @@
     </ul>
 <h2> These are recipes from our users.<br/></h2>
 
-
-
 </div>
-<%= will_paginate %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 text-center">
+    <%= will_paginate %>
+  </div>
+</div>
 
 
 <% @recipes.each do |recipe| %>
@@ -62,4 +64,9 @@
   </div>  
   <hr/>
 <% end %>
-<%= will_paginate %>
+
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 text-center">
+    <%= will_paginate %>
+  </div>
+</div>
