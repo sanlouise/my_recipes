@@ -2,7 +2,6 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:edit, :update, :show]
   before_action :require_user, except: [:show, :index]
   before_action :require_same_user, only: [:edit, :update]
-  before_action :admin_user, only: :destroy
   
   def index
     @recipes = Recipe.paginate(page: params[:page], per_page: 6)
