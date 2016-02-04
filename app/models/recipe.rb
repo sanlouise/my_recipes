@@ -5,9 +5,9 @@ class Recipe < ActiveRecord::Base
   has_many :recipe_ingredients, dependent: :destroy
   has_many :ingredients, through: :recipe_ingredients
   validates :chef_id, presence: true
-  validates :name, presence: true, length: {minimum: 5, maximum: 50}
-  validates :summary, presence: true, length: {minimum: 3, maximum: 350}
-  validates :description, presence: true, length: {minimum: 20, maximum: 500}
+  validates :name, presence: true, length: {minimum: 4, maximum: 50}
+  validates :summary, presence: true, length: {minimum: 3, maximum: 200}
+  validates :description, presence: true, length: {minimum: 20, maximum: 5000}
   mount_uploader :picture, PictureUploader
   validate :picture
   
