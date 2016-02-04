@@ -1,45 +1,75 @@
 <br>
 <br>
 
-  <%= render 'shared/page_title', title: @recipe.name %>
+<%= render 'shared/page_title', title: @recipe.name %>
   
-        <h5><%= link_to "Return to Recipes", recipes_path, class: "btn btn-primary btn-md" %> </h5>
-  
-  <div class="row">
-    <div class="col-md-4 pull-right text-center">
-      <%= link_to gravatar_for(@recipe.chef, size: 150), chef_path(@recipe.chef) %>
-      <p>
-        <h4>Brought to you by Chef <%= @recipe.chef.name %></h4>
-      </p>
-    </div>
-    <div class="col-md-8">
-
-        <h3><%= @recipe.summary %></h3>
-        
-      <div class="show_recipe">
-        <%= image_tag(@recipe.picture.url, class: "gravatar") if @recipe.picture? %>
-      </div>
-        
+<div class="row">
+  <div class="col-md-12">
+    
+    <!--Left Side-->
+    <div class="col-md-7">
       
+      <!--Recipe Summary-->
+      <div class="row">
+        <div class="col-md-12">
+          <h3><%= @recipe.summary %></h3>
+        </div>
+      </div>
+      
+      <!--Recipe Image-->
+      <div class="row">
+        <div class="col-md-12 show_recipe">
+          <%= image_tag(@recipe.picture.url, size: 100, class: "gravatar") if @recipe.picture? %>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!--Right Side-->
+    <div class="col-md-5">
+      
+      <!--Chef Image-->
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <%= link_to gravatar_for(@recipe.chef, size: 75), chef_path(@recipe.chef) %>
+          <h4>Brought to you by Chef <%= @recipe.chef.name %></h4>
+        </div>
+      </div>
+      
+      <hr/>
+      
+      <!--Recipe Details-->
+      <div class="row">
+        <div class="col-md-12">
+          <% if @recipe.styles.any? %>
+            <p>Dish Style: <%= render @recipe.styles %></p>
+          <% end %>
+          <p><b>Steps:</b></p>
+          <%= simple_format(@recipe.description) %>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!--Bottom Buttons-->
+    <div class="row">
+      <div class="col-md-12">
         
-      <div class="well">
-        <% if @recipe.styles.any? %>
-          <p>Dish Style: <%= render @recipe.styles %></p>
+        <!--Return to Recipes Button-->
+        <h5><%= link_to "Return to Recipes", recipes_path, class: "btn btn-primary btn-md" %></h5>
+        
+        <!--Edit Button-->
+        <% if logged_in? and (@recipe.chef == current_user || current_user.admin?) %>
+          <h4><%= link_to "Edit this Recipe", edit_recipe_path(@recipe), class: "btn btn-success pull-left" %></h4>
+        <% end %>    
+        
+        <!--Delete Button-->
+        <% if logged_in? and current_user.admin? %>
+          <%= link_to "Delete Recipe", @recipe, method: :delete, class: "btn btn-danger pull-left", data: {confirm: "Are you sure that you want to delete this recipe?"} %>
         <% end %>
         
-        <% if @recipe.styles.any? %>
-          <p>Ingredients: <%= render @recipe.ingredients %></p>
-        <% end %>
-        
-        <p><b>Steps:</b></p>
-        <%= simple_format(@recipe.description) %>
       </div>
     </div>
+    
   </div>
-    <% if logged_in? and (@recipe.chef == current_user || current_user.admin?) %>
-      <h4><%= link_to "Edit this Recipe", edit_recipe_path(@recipe), class: "btn btn-success pull-left" %></h4>
-    <% end %>    
-
-    <% if logged_in? and current_user.admin? %>
-      <%= link_to "Delete Recipe", @recipe, method: :delete, class: "btn btn-danger pull-left", data: {confirm: "Are you sure that you want to delete this recipe?"} %>
-    <% end %>
+</div>
