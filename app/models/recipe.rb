@@ -10,6 +10,7 @@ class Recipe < ActiveRecord::Base
   validates :description, presence: true, length: {minimum: 20, maximum: 500}
   mount_uploader :picture, PictureUploader
   validate :picture
+  
   default_scope -> { order(updated_at: :desc) }
   
   private
