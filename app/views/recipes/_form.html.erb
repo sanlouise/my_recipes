@@ -12,19 +12,19 @@
     <%= f.label(:description, "Description and Steps") %>
     <%= f.text_area :description, rows: 10 %>
     
-    <strong>Styles:</strong>
+    <strong>Cuisine:</strong>
  
       <%= f.collection_check_boxes :style_ids, Style.all, :id, :name do |cb| %>
         <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
       <% end %>
     <br/>
-    <strong>Ingredients:</strong>
+    <!--<strong>Ingredients:</strong>-->
  
-      <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name do |cb| %>
-        <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
-      <% end %>
+    <!--  <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name do |cb| %>-->
+    <!--    <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>-->
+    <!--  <% end %>-->
 
-    <br/><br/>
+    <!--<br/><br/>-->
     
     <span class="picture">
       <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>

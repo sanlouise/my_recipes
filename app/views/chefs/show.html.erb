@@ -22,18 +22,18 @@
       <p>
         <span class="quiet">
           <small>
-            Created: <%= time_ago_in_words(recipe.created_at) %> ago.
+            Created <%= time_ago_in_words(recipe.created_at) %> ago.
           </small>
         </span>
          <span class="quiet">
-          <small>
-            Updated: <%= time_ago_in_words(recipe.updated_at) %> ago.
-          </small>
+          <!--<small>-->
+          <!--  Updated: <%= time_ago_in_words(recipe.updated_at) %> ago.-->
+          <!--</small>-->
         </span>
 
     </div>
     <div class="col-md-2">
-      <%= image_tag(recipe.picture.url, size: "250x175", class: "gravatar") if recipe.picture? %>
+      <%= image_tag(recipe.picture.url, size: "225x150", class: "gravatar") if recipe.picture? %>
     </div>
   </div>
 <% end %>

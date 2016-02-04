@@ -34,23 +34,23 @@
         <h4><%= recipe.summary %></h4>
         
           <% if recipe.styles.any? %>
-          <p>Style: <%= render recipe.styles %></p>
+          <p>Cuisine: <%= render recipe.styles %></p>
         <% end %>
         
-        <% if recipe.ingredients.any? %>
-        <p>Ingredients: <%= render recipe.ingredients %></p>
-         <% end %>
+        <!--<% if recipe.ingredients.any? %>-->
+        <!--<p>Ingredients: <%= render recipe.ingredients %></p>-->
+        <!-- <% end %>-->
       <p>
         <span class="quiet">
           <small>
-            Created: <%= time_ago_in_words(recipe.created_at) %> ago.
+            Created about <%= time_ago_in_words(recipe.created_at) %> ago.
           </small>
         </span>
-         <span class="quiet">
-          <small>
-            Updated: <%= time_ago_in_words(recipe.updated_at) %> ago.
-          </small>
-        </span>
+        <!-- <span class="quiet">-->
+        <!--  <small>-->
+        <!--    Updated: <%= time_ago_in_words(recipe.updated_at) %> ago.-->
+        <!--  </small>-->
+        <!--</span>-->
     </div>
 
      <div class="col-md-2">
