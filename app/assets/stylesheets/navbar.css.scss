@@ -1,0 +1,60 @@
+#logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+  margin-right: 30px;
+  font-size: 2em;
+  color: #fff;
+  text-transform: none;
+  letter-spacing: none;
+  padding-top: 9px;
+  font-weight: bold;
+  background-color: none;
+  
+}
+
+#logo:hover {
+    color: white;
+    text-decoration: none;
+    background-color: none;
+  }
+  
+.nav_item {
+  margin-left: 25px;
+  float: right;
+  margin-top: 20px;
+  
+}
+
+
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff !important;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  border: none;
+}
+
+.button.navbar-toggle.collapsed {
+  color: white;
+}
+
+.span.icon-bar {
+  color:white;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: white;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
