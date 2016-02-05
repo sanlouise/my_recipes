@@ -1,69 +1,64 @@
 <body class ="image responsive home-bg">
-  
   <div class ="img-responsive home">
-
-     <div class="white jumbotron text-center home">
     
-    <% if logged_in? %>
-      <h1> Show your cooking genius! </h1>
-        <h2> Share your recipes with our hungry community.<br/></h2>
-          <container>
-            <%= link_to "New Recipe", new_recipe_path, class: "btn btn-lg btn-success" %>
-          </container>
-    <% else %>
-      <h1> Fingerlicking Good </h1>
-      <br/>
-      
-      <h2> Food is better shared.</h2>
-      <br/>
-        <container>
-          <%= link_to "Join Now", register_path, class: "btn btn-lg btn-warning" %>
-        </container>
-    <% end %>
-        <!--<p class="small-sandra">Find Out Why</p>-->
+    <!--Homepage Main Header-->
+    <div class="white jumbotron text-center home">
+      <% if logged_in? %>
         
-
+        <!--New Recipe Link-->
+        <h1>Show your cooking genius!</h1>
+        <h2> Share your recipes with our hungry community.</h2>
+        <br/>
+        <%= link_to "New Recipe", new_recipe_path, class: "btn btn-lg btn-success" %>
+        
+      <% else %>
+      
+        <!--Registration Link-->
+        <h1> Fingerlicking Good </h1>
+        <h2> Food is better shared.</h2>
+        <br/>
+        <%= link_to "Join Now", register_path, class: "btn btn-lg btn-warning" %>
+        
+      <% end %>
     </div>
-    
-    
+
     <div class="row">
       <div class="col-md-12">
+        
+        <!--Left Box-->
         <div class="col-md-4 col-md-offset-1 well text-center">
           <h2 class="midrow">Just want to browse?</h2>
-
           <%= link_to "Browse All Recipes", recipes_path, class: "btn btn-primary btn-small" %>
         </div>
         
+        <!--Empty Div-->
         <div class="col-md-2">
-              
         </div>
         
-       <% if logged_in? %>  
+        <% if logged_in? %>  
        
-        <div class="col-md-4 col-md-offset-1 well text-center">
-          <h2 class="midrow">Manage Your Recipes</h2>
-          <%= link_to "Your Recipes", chef_path(current_user), class: "btn btn-primary btn-small" %>
-        </div>
-        
-       
-        
+          <!--User Profile Page Link-->
+          <div class="col-md-4 col-md-offset-1 well text-center">
+            <h2 class="midrow">Manage Your Recipes</h2>
+            <%= link_to "Your Recipes", chef_path(current_user), class: "btn btn-primary btn-small" %>
+          </div>
+
         <% else %>
         
-        <div class="col-md-4  well text-center">
-          <h2 class="midrow">Log in to Your Account</h2>
+          <!--Login Link-->
+          <div class="col-md-4  well text-center">
+            <h2 class="midrow">Log in to Your Account</h2>
+            <%= link_to "Log In", login_path, class: "btn btn-success btn-small" %>
+          </div>
+          
+        <% end %>
 
-          <%= link_to "Log In", login_path, class: "btn btn-success btn-small" %>
+        <!--Empty Div-->
+        <div class="col-md-12-hide">            ...
         </div>
-      </div>
-
-      <div class="col-md-12-hide">
-            ...
-      </div>
       
-      <% end %>
-      
-
-
+      </div>
     </div>
+    
   </div>
 </body>
