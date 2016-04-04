@@ -49,7 +49,7 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
-    coderay (1.1.0)
+    coderay (1.1.1)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -58,7 +58,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     erubis (2.7.0)
-    excon (0.45.4)
+    excon (0.49.0)
     execjs (2.6.0)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
@@ -96,7 +96,7 @@ GEM
     fog-atmos (0.1.0)
       fog-core
       fog-xml
-    fog-aws (0.8.1)
+    fog-aws (0.9.2)
       fog-core (~> 1.27)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
@@ -105,11 +105,11 @@ GEM
       fog-core (~> 1.22)
       fog-json
       inflecto (~> 0.0.2)
-    fog-core (1.35.0)
+    fog-core (1.37.0)
       builder
       excon (~> 0.45)
       formatador (~> 0.2)
-    fog-dynect (0.0.2)
+    fog-dynect (0.0.3)
       fog-core
       fog-json
       fog-xml
@@ -123,7 +123,7 @@ GEM
     fog-json (1.0.2)
       fog-core (~> 1.0)
       multi_json (~> 1.10)
-    fog-local (0.2.1)
+    fog-local (0.3.0)
       fog-core (~> 1.27)
     fog-powerdns (0.1.1)
       fog-core (~> 1.27)
@@ -147,7 +147,7 @@ GEM
     fog-serverlove (0.1.2)
       fog-core
       fog-json
-    fog-softlayer (1.0.3)
+    fog-softlayer (1.1.0)
       fog-core
       fog-json
     fog-storm_on_demand (0.1.1)
@@ -176,21 +176,23 @@ GEM
     hike (1.2.3)
     i18n (0.7.0)
     inflecto (0.0.2)
-    ipaddress (0.8.2)
+    ipaddress (0.8.3)
     jbuilder (2.0.0)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
-    jquery-rails (4.1.0)
-      rails-dom-testing (~> 1.0)
+    jquery-rails (4.1.1)
+      rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
-    mail (2.6.3)
-      mime-types (>= 1.16, < 3)
+    mail (2.6.4)
+      mime-types (>= 1.16, < 4)
     method_source (0.8.2)
-    mime-types (2.99)
+    mime-types (3.0)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0221)
     mini_magick (3.8.0)
       subexec (~> 0.2.1)
     mini_portile2 (2.0.0)
@@ -229,14 +231,14 @@ GEM
       rails_serve_static_assets
       rails_stdout_logging
     rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.4)
+    rails_stdout_logging (0.0.5)
     railties (4.2.4)
       actionpack (= 4.2.4)
       activesupport (= 4.2.4)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.5.0)
-    rdoc (4.2.1)
+    rake (11.1.2)
+    rdoc (4.2.2)
       json (~> 1.4)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -248,7 +250,7 @@ GEM
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
     slop (3.6.0)
-    spring (1.6.2)
+    spring (1.6.4)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
