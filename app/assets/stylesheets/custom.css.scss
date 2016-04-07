@@ -19,9 +19,7 @@ $navbar-default-color: 	#4169E1;
 body {
 
   font-family: 'Lato', sans-serif !important;
-  // background-image: url("salad.jpg") !important;
-  background-size: 100%;
-  background-repeat: no-repeat;
+
 }
 
 
@@ -113,8 +111,6 @@ span.picture {
   padding-right: 15px;
 }
 
-
-
 h2 {
   text-align: center;
 }
@@ -136,13 +132,11 @@ div.white.jumbotron.p.small-sandra {
 }
 
 .image.responsive.home-bg {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Raw_Vegan_Veggy_Patty.jpg");
+  background-image: url("vegan_patty.jpg"); 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  background-position: center center;
-  
+  background-size: cover; 
   /* Set rules to fill background */
   min-width: 100%;
 	
@@ -177,9 +171,7 @@ h3.a {
   text-align: center !important;
 }
 
-.div-index-recipes
-
-{
+.div-index-recipes {
   background-color: black !important;
   margin-bottom: 10px !important;
 }
@@ -194,13 +186,9 @@ hr {
   color: black !important;
 }
 
-// Media Queries
-
 @media screen and (max-width: 500px) {
-  
 .chef_info {
     display: none;
-  
 }
 
 .img-gravatar {
