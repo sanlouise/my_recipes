@@ -137,15 +137,21 @@ div.white.jumbotron.p.small-sandra {
 
 .image.responsive.home-bg {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Raw_Vegan_Veggy_Patty.jpg");
-  background-size: 100%;
-  background-repeat:no-repeat;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  background-size:cover;
-  background-position:center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
   
-  
+  /* Set rules to fill background */
+  min-width: 100%;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: 100%;
+	
+  /* Set up positioning */
+  position: fixed;
 }
 
 .footer {
