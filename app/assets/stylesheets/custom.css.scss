@@ -1,9 +1,4 @@
 
-.small-little {
-  font-size: 13px !important;
-  text-align: center;
-}
-
 $navbar-default-bg: #044F67;
 $light-orange: #32CD32;
 $navbar-default-color: 	#4169E1;
@@ -12,26 +7,15 @@ $navbar-default-color: 	#4169E1;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
-
-
-
 body {
-
   font-family: 'Lato', sans-serif !important;
-
 }
-
-
 
 .home-box{
   width: 32%;
   margin-left: 2px;
   margin-right: 2px;
-
 }
-
-
 
 h1, h2, h3, h4 {
   line-height: 1;
@@ -53,6 +37,10 @@ h2 {
   border: 5px solid rgba(255, 255, 255, .5);
 }
 
+.small-little {
+  font-size: 13px !important;
+  text-align: center;
+}
 
 .footer{
   margin-top: 25px;
@@ -132,7 +120,7 @@ div.white.jumbotron.p.small-sandra {
 }
 
 .image.responsive.home-bg {
-  background-image: url("vegan_patty.jpg"); 
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/de/Raw_Vegan_Veggy_Patty.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -154,7 +142,6 @@ div.white.jumbotron.p.small-sandra {
    height:40px;
    width:100%;
    background-color: none;
-
 }
 
 .col-md-12-hide {
@@ -175,7 +162,6 @@ h3.a {
   background-color: black !important;
   margin-bottom: 10px !important;
 }
-
 
 .col-lg-6.well {
   margin-top: 5px;
@@ -198,7 +184,6 @@ hr {
     width:100%;
 }
 }
-
 
 hr {
   border-color: #26A65B !important;
